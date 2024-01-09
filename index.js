@@ -21,27 +21,46 @@ function onPress(e) {
             moveRight();
             break;
 
+        case "w":
+            moveUp();
+            setTimeout(moveDown, 200);
+            break;
+
         default:
             break;
     }
 }
 
+
+function moveUp() {
+
+    juegitos -= 10
+    redraw();
+
+}
+
+function moveDown() {
+
+    juegitos += 10
+
+}
+
 function moveLeft() {
 
 
-    if (cajita== 0 || cajita < 0) {
-     
-        
-    }else{
-        cajita-=5;
+    if (cajita == 0 || cajita < 0) {
+
+
+    } else {
+        cajita -= 5;
         redraw();
     }
 
 }
 
 function moveRight() {
-    if (cajita == 260 || cajita > 260) {
-       
+    if (cajita == 270 || cajita > 270) {
+
     } else {
         cajita += 5;
         redraw();
